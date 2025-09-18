@@ -120,6 +120,7 @@ The portfolio will be available at `http://localhost:3000`.
 
 ## 🔗 Links
 
+-**Live Demo**: <https://afarssiouaouday.vercel.app/>
 - GitHub: [https://github.com/afarssiouaouday](https://github.com/afarssiouaouday)
 - LinkedIn: [https://www.linkedin.com/in/aouday-afarssiou-3361a4291/](https://www.linkedin.com/in/aouday-afarssiou-3361a4291/)
 
