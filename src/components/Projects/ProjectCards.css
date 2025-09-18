@@ -1,0 +1,37 @@
+/* 🔹 Conteneur slider */
+.tech-icons-slider {
+  overflow: hidden;
+  width: 100%;
+  margin: 15px 0;
+  position: relative;
+}
+
+/* 🔹 Bande qui défile */
+.tech-icons-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 12s linear infinite;
+  width: max-content;
+}
+
+/* 🔹 Icônes */
+.tech-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-icon:hover {
+  transform: scale(1.3);
+  color: #007bff;
+}
+
+/* 🔹 Animation défilement */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

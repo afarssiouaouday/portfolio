@@ -1,0 +1,30 @@
+.techstack-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.techstack-slider {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite; 
+}
+
+.techstack-icon {
+  font-size: 3rem;
+  margin: 0 25px;
+  transition: transform 0.3s;
+}
+
+.techstack-icon:hover {
+  transform: scale(1.3);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
