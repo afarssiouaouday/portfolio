@@ -1,0 +1,43 @@
+/* Centrer le calendrier */
+.github-calendar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #c084f5 !important;
+}
+
+/* Couleur des textes SVG (mois comme Jan, Feb, Mar, etc.) */
+.github-calendar-wrapper text {
+  fill: #c084f5 !important;
+}
+
+.github-calendar-wrapper svg text {
+  fill: #c084f5 !important;
+}
+
+/* Couleur du texte "242 contributions in the last year" */
+.github-calendar-wrapper > div:first-child {
+  color: #c084f5 !important;
+}
+
+/* Couleur de "Less" et "More" dans la légende */
+.github-calendar-wrapper .react-activity-calendar__legend-colors {
+  color: #c084f5 !important;
+}
+
+/* Couleur du compteur de contributions */
+.github-calendar-wrapper .react-activity-calendar__count {
+  color: #c084f5 !important;
+}
+
+/* Force tous les éléments texte en violet */
+.github-calendar-wrapper * {
+  color: #c084f5 !important;
+}
+
+/* Responsive - centrage sur mobile */
+@media (max-width: 768px) {
+  .github-calendar-wrapper {
+    overflow-x: auto;
+  }
+}
