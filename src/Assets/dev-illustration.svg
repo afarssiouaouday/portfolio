@@ -1,0 +1,101 @@
+<svg width="540" height="470" viewBox="0 0 540 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="winGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241245" />
+      <stop offset="1" stop-color="#180d30" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#667eea" />
+      <stop offset="1" stop-color="#764ba2" />
+    </linearGradient>
+  </defs>
+
+  <!-- decorative blobs -->
+  <circle cx="80" cy="90" r="70" fill="#764ba2" opacity="0.14" />
+  <circle cx="470" cy="380" r="90" fill="#667eea" opacity="0.12" />
+  <circle cx="460" cy="70" r="34" fill="#c770f0" opacity="0.16" />
+
+  <!-- editor window -->
+  <g>
+    <rect x="70" y="70" width="400" height="290" rx="16" fill="url(#winGrad)"
+      stroke="#764ba2" stroke-width="2" />
+    <!-- title bar -->
+    <path d="M70 86 a16 16 0 0 1 16 -16 h368 a16 16 0 0 1 16 16 v22 h-400 z"
+      fill="#2d1b52" />
+    <circle cx="92" cy="91" r="5" fill="#ff5f57" />
+    <circle cx="110" cy="91" r="5" fill="#febc2e" />
+    <circle cx="128" cy="91" r="5" fill="#28c840" />
+    <rect x="150" y="84" width="90" height="14" rx="7" fill="#c770f0" opacity="0.25" />
+
+    <!-- line numbers -->
+    <g fill="#5a447f">
+      <rect x="86" y="126" width="10" height="6" rx="3" />
+      <rect x="86" y="146" width="10" height="6" rx="3" />
+      <rect x="86" y="166" width="10" height="6" rx="3" />
+      <rect x="86" y="186" width="10" height="6" rx="3" />
+      <rect x="86" y="206" width="10" height="6" rx="3" />
+      <rect x="86" y="226" width="10" height="6" rx="3" />
+      <rect x="86" y="246" width="10" height="6" rx="3" />
+      <rect x="86" y="266" width="10" height="6" rx="3" />
+      <rect x="86" y="286" width="10" height="6" rx="3" />
+      <rect x="86" y="306" width="10" height="6" rx="3" />
+    </g>
+
+    <!-- code lines -->
+    <g rx="3">
+      <rect x="112" y="124" width="70" height="8" rx="4" fill="#c770f0" />
+      <rect x="190" y="124" width="120" height="8" rx="4" fill="#8a6bb8" />
+
+      <rect x="130" y="144" width="60" height="8" rx="4" fill="#667eea" />
+      <rect x="198" y="144" width="90" height="8" rx="4" fill="#7ee8b0" />
+
+      <rect x="130" y="164" width="100" height="8" rx="4" fill="#7ee8b0" />
+      <rect x="238" y="164" width="60" height="8" rx="4" fill="#8a6bb8" />
+
+      <rect x="148" y="184" width="80" height="8" rx="4" fill="#febc2e" />
+      <rect x="236" y="184" width="110" height="8" rx="4" fill="#8a6bb8" />
+
+      <rect x="148" y="204" width="60" height="8" rx="4" fill="#667eea" />
+      <rect x="216" y="204" width="70" height="8" rx="4" fill="#c770f0" />
+
+      <rect x="130" y="224" width="50" height="8" rx="4" fill="#c770f0" />
+
+      <rect x="112" y="244" width="90" height="8" rx="4" fill="#8a6bb8" />
+      <rect x="210" y="244" width="130" height="8" rx="4" fill="#7ee8b0" />
+
+      <rect x="130" y="264" width="70" height="8" rx="4" fill="#667eea" />
+      <rect x="208" y="264" width="80" height="8" rx="4" fill="#8a6bb8" />
+
+      <rect x="130" y="284" width="110" height="8" rx="4" fill="#febc2e" />
+
+      <rect x="112" y="304" width="60" height="8" rx="4" fill="#c770f0" />
+    </g>
+  </g>
+
+  <!-- floating </> badge -->
+  <g>
+    <rect x="360" y="300" width="120" height="90" rx="18" fill="#764ba2"
+      stroke="#c770f0" stroke-width="2" />
+    <path d="M400 328 l-14 17 14 17" stroke="#fff" stroke-width="5"
+      fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M440 328 l14 17 -14 17" stroke="#fff" stroke-width="5"
+      fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M424 322 l-8 40" stroke="#c770f0" stroke-width="5"
+      fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- floating terminal chip -->
+  <g>
+    <rect x="60" y="330" width="150" height="70" rx="14" fill="#1a1033"
+      stroke="#667eea" stroke-width="2" />
+    <path d="M78 352 l14 12 -14 12" stroke="#7ee8b0" stroke-width="4"
+      fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="104" y="374" width="60" height="7" rx="3.5" fill="#8a6bb8" />
+  </g>
+
+  <!-- floating gear -->
+  <g transform="translate(452 176)" fill="#c770f0" opacity="0.9">
+    <path d="M0 -18 l4 0 2 6 5 2 5 -3 3 3 -3 5 2 5 6 2 0 4 -6 2 -2 5 3 5 -3 3 -5 -3 -5 2 -2 6 -4 0 -2 -6 -5 -2 -5 3 -3 -3 3 -5 -2 -5 -6 -2 0 -4 6 -2 2 -5 -3 -5 3 -3 5 3 5 -2 2 -6z" />
+    <circle cx="0" cy="0" r="6" fill="#241245" />
+  </g>
+</svg>

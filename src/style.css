@@ -254,6 +254,23 @@ button:focus {
   padding-top: 80px !important;
 }
 
+.hero-illustration {
+  width: 100%;
+  max-height: 470px;
+  filter: drop-shadow(0 12px 40px rgba(199, 112, 240, 0.3));
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
 .home-section {
   position: relative;
   z-index: -1;
@@ -451,10 +468,8 @@ button:focus {
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   height: auto !important;
 }
 
@@ -751,14 +766,87 @@ button:focus {
   margin-bottom: 50px;
 }
 
+.experience-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-timeline-item {
+  display: flex;
+  gap: 24px;
+}
+
+.experience-timeline-marker {
+  flex: 0 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-logo-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #c770f0;
+  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.experience-logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Logos with their own solid background fill the circle edge-to-edge */
+.experience-logo-circle img.logo-full {
+  padding: 0;
+  object-fit: cover;
+}
+
+.experience-logo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.experience-timeline-line {
+  flex: 1;
+  width: 3px;
+  min-height: 24px;
+  margin-top: 8px;
+  background: linear-gradient(180deg, #c770f0 0%, rgba(199, 112, 240, 0.1) 100%);
+}
+
+.experience-timeline-item:last-child .experience-timeline-line {
+  display: none;
+}
+
 .experience-card {
+  flex: 1;
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   padding: 20px 25px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s;
+}
+
+.experience-timeline-item:last-child .experience-card {
+  margin-bottom: 0;
 }
 
 .experience-card:hover {
@@ -781,13 +869,231 @@ button:focus {
   opacity: 0.9;
 }
 
-.experience-img {
-  text-align: center;
-  margin-bottom: 30px;
+.experience-tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
 }
 
-.experience-img img {
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 4px 20px rgba(92, 225, 230, 0.5));
+.experience-tech-icon {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.experience-description {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 576px) {
+  .experience-timeline-item {
+    gap: 14px;
+  }
+
+  .experience-logo-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .experience-timeline-marker {
+    flex: 0 0 48px;
+  }
+
+  .experience-card {
+    padding: 16px 18px;
+  }
+}
+
+/* ===================================================== */
+/* SITE-WIDE POLISH — cohesive design system             */
+/* ===================================================== */
+
+html {
+  --accent: #c770f0;
+  --accent-2: #764ba2;
+  --accent-3: #667eea;
+  --brand-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --glass-bg: rgba(255, 255, 255, 0.045);
+  --glass-border: rgba(199, 112, 240, 0.18);
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(199, 112, 240, 0.35);
+  color: #fff;
+}
+
+/* Anchors clear the fixed navbar when reached via hash links */
+#home,
+#about,
+#skills,
+#experiences,
+#projects,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+/* --- Unified section headings with accent underline --- */
+.project-heading,
+.experience-heading {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 2.5em !important;
+  letter-spacing: 0.5px;
+  width: 100%;
+  margin-bottom: 12px !important;
+}
+
+.project-heading::after,
+.experience-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 16px auto 0;
+  border-radius: 4px;
+  background: var(--brand-gradient);
+}
+
+/* --- Navbar polish --- */
+.navbar {
+  backdrop-filter: blur(8px) !important;
+}
+
+.sticky {
+  background-color: rgba(18, 12, 32, 0.75) !important;
+  border-bottom: 1px solid rgba(199, 112, 240, 0.15) !important;
+}
+
+.navbar-nav .nav-item a:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-brand span {
+  transition: text-shadow 0.3s ease;
+}
+
+.navbar-brand:hover span {
+  text-shadow: 0 0 18px rgba(199, 112, 240, 0.8);
+}
+
+/* --- Home intro as a glass panel --- */
+.home-about-section {
+  overflow: hidden;
+}
+
+.home-about-description {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: clamp(24px, 4vw, 44px) !important;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Skills section --- */
+#skills {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.techstack-container {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+}
+
+.techstack-container:hover .techstack-slider {
+  animation-play-state: paused;
+}
+
+.techstack-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.techstack-icon:hover {
+  filter: drop-shadow(0 0 12px rgba(199, 112, 240, 0.6));
+}
+
+/* --- Global gradient buttons --- */
+.btn-primary {
+  background: var(--brand-gradient) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 8px 22px !important;
+  font-weight: 600 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.5) !important;
+}
+
+/* --- Project cards: remove leftover transparency --- */
+.project-card-view {
+  opacity: 1 !important;
+}
+
+/* --- Footer polish --- */
+.footer {
+  background: rgba(12, 8, 24, 0.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(199, 112, 240, 0.15);
+}
+
+.footer h3 {
+  opacity: 0.85;
+}
+
+.footer-icons li a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.2em;
+  transition: transform 0.3s ease, background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-icons li a:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(199, 112, 240, 0.5);
+}
+
+/* --- Preloader subtle glow --- */
+#preloader {
+  background-image: url(./Assets/pre.svg),
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(118, 75, 162, 0.25),
+      transparent 60%
+    );
 }

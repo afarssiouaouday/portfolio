@@ -1,5 +1,5 @@
 export const typewriterStrings = [
-  "Computer Engineering Student",
+  "Computer Engineer",
   "Fullstack Developer",
-  "Future Software Engineer"
+  "Software Engineer"
 ];

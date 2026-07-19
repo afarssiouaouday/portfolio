@@ -3,7 +3,6 @@
 import {
   DiJavascript1,
   DiReact,
-  DiMongodb,
   DiGit,
   DiJava,
   DiMysql,
@@ -21,15 +20,10 @@ import {
   SiBootstrap,
   SiVisualstudiocode,
   SiPostman,
-  SiSlack,
-  SiVercel,
-  SiWindows,
   SiIntellijidea,
-  SiEclipseide,
   SiFlyway,
   SiGithub,
   SiJira,
-  SiNotion,
   SiLinux,
 } from "react-icons/si";
 

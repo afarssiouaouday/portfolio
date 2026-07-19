@@ -13,10 +13,8 @@ import {
   SiChartdotjs, 
   SiDocker, 
   SiBootstrap, 
-  SiTailwindcss, 
-  SiSwagger, 
-  SiOpenapiinitiative, 
-  SiGoogle, 
+  SiTailwindcss,
+  SiSwagger,
   SiRedis
 } from "react-icons/si";
 import { FaKey } from "react-icons/fa"; 

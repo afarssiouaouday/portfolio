@@ -12,11 +12,20 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Works</strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p
+          style={{
+            color: "rgba(255,255,255,0.75)",
+            textAlign: "center",
+            marginBottom: "10px",
+          }}
+        >
           Here are a few projects I've worked on recently.
         </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row
+          className="g-4"
+          style={{ justifyContent: "center", paddingBottom: "10px" }}
+        >
           {projects.map((project, idx) => (
             <Col md={4} className="project-card" key={idx}>
               <ProjectCard
